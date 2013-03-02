@@ -16,7 +16,10 @@ import java.security.SecureRandom
 class AuthController {
     def shiroSecurityManager
 
-    def index = { redirect(action: "login", params: params) }
+    def index = {
+
+        redirect(action: "login", params: params)
+    }
 
     def login = {
         return [ username: params.username, rememberMe: (params.rememberMe != null), targetUri: params.targetUri ]
@@ -43,11 +46,12 @@ class AuthController {
         
         // If a controller redirected to this page, redirect back
         // to it. Otherwise redirect to the root URI.
+        println("targeturi: ${params.targetUri}")
         def targetUri = params.targetUri ?: "/"
         
         // Handle requests saved by Shiro filters.
         def savedRequest = WebUtils.getSavedRequest(request)
-        if (savedRequest) {
+        if (savedRequest) {     print("deu saved request: " + savedRequest.toString())
             targetUri = savedRequest.requestURI - request.contextPath
             if (savedRequest.queryString) targetUri = targetUri + '?' + savedRequest.queryString
         }

@@ -24,7 +24,8 @@ class PeriodicoController {
 	def save () {
 		def periodicoInstance = new Periodico(params)
 		PublicationController pb = new PublicationController()
-		
+        /*File aa = new File("./teste.txt")
+        aa.createNewFile()*/
 		if (!pb.upload(periodicoInstance) || !periodicoInstance.save(flush: true)) {
 			render(view: "create", model: [periodicoInstance: periodicoInstance])
 			return

@@ -43,6 +43,12 @@ class BootStrap {
             admin.save()
             
             print("Instancia de Admin = "+Member.findByUsername('admin').toString())
+            /*log.error("dffdfdfd")
+            File aa = new File("./teste.txt")
+            aa.createNewFile()
+            println(new File("./teste.txt").getAbsolutePath())
+            println(System.getProperty("user.dir"))
+            println("foi aqui...")  */
         }
 
 		ResearchLine rl = new ResearchLine()

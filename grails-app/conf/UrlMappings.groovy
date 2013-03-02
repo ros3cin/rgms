@@ -7,7 +7,14 @@ class UrlMappings {
 			}
 		}
 
-		"/"(view:"/index")
+		//"/"(view:"/index")
+        //"/"(controller: 'Auth', action: 'login')
+        "/"(view:  'initial')
 		"500"(view:'/error')
+        //"/$view"()
+
+        //"/initial"(view: "initial")
+        "/${view}.gspv"()
+        "/${view}.gsp"(controller:  "Auth", action: "login")
 	}
 }

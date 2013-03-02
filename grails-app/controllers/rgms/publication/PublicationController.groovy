@@ -22,7 +22,9 @@ class PublicationController {
 	
 	def upload(Publication publicationInstance) {
 			
+
 		def originalName = publicationInstance.file
+
 		def filePath = "web-app/uploads/${originalName}"
 		publicationInstance.file = filePath
 		

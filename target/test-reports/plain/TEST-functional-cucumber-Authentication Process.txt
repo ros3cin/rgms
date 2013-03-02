@@ -1,11 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuites>
-  <testsuite errors="0" failures="0" hostname="Flavio-PCW" id="0" name="Authentication Process" package="" tests="1" time="9.724" timestamp="2013-03-02T17:30:42">
-      <properties />
-
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="9.578" />
-
-      <system-out><![CDATA[Feature: Authentication Process
+Testsuite: Authentication Process
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 9,724 sec
+------------- Standard Output ---------------
+Feature: Authentication Process
   As a registered member in the system
   I want to have access to all of its internal features, which are only accessible after a successful login procedure
 
@@ -15,14 +11,13 @@ ENTROU no signIn
 Enabled == trueENTROU NO TRYJefferson Almeida    Given I am at the Member Listagem page             # AuthenticationSteps.groovy:11
     When I select the "Principal" menu option          # AuthenticationSteps.groovy:20
     Then I am redirected to the Publications Menu page # AuthenticationSteps.groovy:24
-]]></system-out>
+------------- ---------------- ---------------
+------------- Standard Error -----------------
 
-      <system-err><![CDATA[
 --Output from --Started ChromeDriver
 port=39182
 version=26.0.1383.0
 log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsTeste\chromedriver.log
-]]></system-err>
+------------- ---------------- ---------------
 
-  </testsuite>
-</testsuites>
+Testcase:  took 9,578 sec

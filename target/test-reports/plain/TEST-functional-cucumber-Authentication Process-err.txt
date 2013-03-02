@@ -1,0 +1,5 @@
+
+--Output from --Started ChromeDriver
+port=39182
+version=26.0.1383.0
+log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsTeste\chromedriver.log
