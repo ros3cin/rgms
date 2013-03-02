@@ -1,3 +1,4 @@
+import org.apache.shiro.SecurityUtils
 import pages.ArticleCreatePage
 import pages.ArticlesPage
 import pages.LoginPage
@@ -24,3 +25,17 @@ When (~'I select the "([^"]*)" menu option') { String option ->
 Then (~'I am redirected to the Publications Menu page') { ->
     at PublicationsPage
 }
+      /*
+Given (~'I am not logged') {
+    assert SecurityUtils.subject?.principal == null
+}
+
+When (~'I access the Publications Menu Page') {
+    to LoginPage
+    at LoginPage
+    page.fillLoginData("admin", "adminadmin")
+}
+
+Then (~'I am redirected to the Login Page') {
+    at LoginPage
+}              */

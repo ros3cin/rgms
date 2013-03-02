@@ -9,12 +9,15 @@ class UrlMappings {
 
 		//"/"(view:"/index")
         //"/"(controller: 'Auth', action: 'login')
-        "/"(view:  'initial')
+
+        //"/"(view:  'initial')
+        "/"(controller: "Auth", action: "index")
 		"500"(view:'/error')
-        //"/$view"()
+
 
         //"/initial"(view: "initial")
+
         "/${view}.gspv"()
-        "/${view}.gsp"(controller:  "Auth", action: "login")
+        //"/${view}.gsp"(controller:  "Auth", action: "index")
 	}
 }

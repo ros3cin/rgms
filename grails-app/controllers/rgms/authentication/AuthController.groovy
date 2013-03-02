@@ -17,8 +17,10 @@ class AuthController {
     def shiroSecurityManager
 
     def index = {
-
-        redirect(action: "login", params: params)
+        if(SecurityUtils.subject?.principal != null)
+            render(view:  "/initial")
+        else
+            redirect(action: "login", params: params)
     }
 
     def login = {
