@@ -24,3 +24,15 @@ When (~'I select the "([^"]*)" menu option') { String option ->
 Then (~'I am redirected to the Publications Menu page') { ->
     at PublicationsPage
 }
+
+Given(~'I am at the Login Page') { ->
+    to LoginPage
+}
+When(~'I try to login with an user that does not exist'){ ->
+    at LoginPage
+    page.fillLoginData('NonExistentUser','NonExistentUserPass')
+}
+Then(~'A login failure message is displayed'){ ->
+    at LoginPage
+    assert (page.flashMessage() != null)
+}

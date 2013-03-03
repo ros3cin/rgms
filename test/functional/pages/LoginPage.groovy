@@ -18,4 +18,8 @@ class LoginPage extends Page {
         $("form").password = p
         $("form").signIn().click()
     }
+
+    def flashMessage(){
+        $("div .message").text()
+    }
 }

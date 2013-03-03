@@ -29,7 +29,11 @@ class AuthController {
         
 //        def subject = SecurityUtils.getSubject();
         Member member = Member.findByUsername(params.username)
-        
+        if(member == null) {
+            flash.message = message(code: "login.failed")
+            redirect(uri: "/auth/login")
+            return
+        }
         print("ENTROU no signIn\nEnabled == "+member.enabled)
         
         if(member.enabled == false){
