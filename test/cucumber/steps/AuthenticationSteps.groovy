@@ -2,6 +2,7 @@ import org.apache.shiro.SecurityUtils
 import pages.ArticleCreatePage
 import pages.ArticlesPage
 import pages.LoginPage
+import pages.RegistrationPage
 import pages.MembersListPage
 import pages.PublicationsPage
 import rgms.publication.Periodico
@@ -38,18 +39,30 @@ Then(~'A login failure message is displayed'){ ->
     assert (page.flashMessage() != null)
 }
 
-      /*
-Given (~'I am not logged') {
+Given(~'I am at the Registration Page') {  ->
+     to RegistrationPage
+}
+When(~'I register a user with success')  {  ->
+     at RegistrationPage
+     page.fillFormWithValidInfo()
+}
+Then(~'A message indicating the user was successfully registered is displayed at login page'){->
+     at RegistrationPage
+     assert (page.flashMessage() != null)
+}
+
+Given (~'I am not logged') {    ->
     assert SecurityUtils.subject?.principal == null
 }
 
-When (~'I access the Publications Menu Page') {
+When (~'I access the Publications Menu Page') {  ->
     to LoginPage
     at LoginPage
     page.fillLoginData("admin", "adminadmin")
 }
 
-Then (~'I am redirected to the Login Page') {
+Then (~'I am redirected to the Login Page') { ->
     at LoginPage
-}              */
+
+}
 

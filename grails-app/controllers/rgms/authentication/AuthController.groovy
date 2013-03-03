@@ -244,21 +244,26 @@ class AuthController {
         def emailAddress = memberInstance?.email
         
         if (!memberInstance.save(flush: true)) {
+            flash.message = "Error creating user"
             render(view: "register", model: [memberInstance: memberInstance])
+            memberInstance.errors.each{
+                println it
+            }
             return
         }
         
         def Admin = Member.findAllByName("Administrator")
         def emailAdmin = Admin?.email
-        print("Email Admin : "+emailAdmin)
-        
-        sendMail {
-            to emailAdmin
-            from grailsApplication.config.grails.mail.username
-            subject "[GRMS] You received a request to authenticate an account."
-            body "Hello Administrator,\n\nYou received a request to authenticate an account.\n\nWho requested was ${name}. His/Her email address is ${emailAddress}\n\n${createLink(absolute:true,uri:'/member/list')}\n\nBest Regards,\nResearch Group Management System".toString()
+        if(emailAdmin != null && !emailAdmin.empty){
+            print("Email Admin : "+emailAdmin)
+
+            sendMail {
+                to emailAdmin
+                from grailsApplication.config.grails.mail.username
+                subject "[GRMS] You received a request to authenticate an account."
+                body "Hello Administrator,\n\nYou received a request to authenticate an account.\n\nWho requested was ${name}. His/Her email address is ${emailAddress}\n\n${createLink(absolute:true,uri:'/member/list')}\n\nBest Regards,\nResearch Group Management System".toString()
+            }
         }
-        
 //        sendMail {
 //            to memberInstance.email
 //            from grailsApplication.config.grails.mail.username
@@ -268,6 +273,9 @@ class AuthController {
         
 //        flash.message = message(code: 'default.created.message', args: [message(code: 'member.label', default: 'Member'), memberInstance.id])
 //        redirect(action: "index", id: memberInstance.id)
-        redirect(view: "/index")
+
+        flash.message = "User successfully created";
+        render(view: "register", model: [memberInstance: memberInstance])
+
     }
 }
