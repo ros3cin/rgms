@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0569137d-7812-4b4a-a5f7-820f5a23a13c" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\RENATO\IdeaProjects\flavioTest\target\test-reports\TEST-functional-cucumber-journal article.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\RENATO\IdeaProjects\flavioTest\target\test-reports\html\0_journal article.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\RENATO\IdeaProjects\flavioTest\target\test-reports\plain\TEST-functional-cucumber-journal article-err.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\RENATO\IdeaProjects\flavioTest\target\test-reports\plain\TEST-functional-cucumber-journal article-out.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\RENATO\IdeaProjects\flavioTest\target\test-reports\plain\TEST-functional-cucumber-journal article.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/0_Authentication Process.html" afterPath="$PROJECT_DIR$/target/test-reports/html/0_Authentication Process.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/plain/TEST-functional-cucumber-Authentication Process-err.txt" afterPath="$PROJECT_DIR$/target/test-reports/plain/TEST-functional-cucumber-Authentication Process-err.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/plain/TEST-functional-cucumber-Authentication Process-out.txt" afterPath="$PROJECT_DIR$/target/test-reports/plain/TEST-functional-cucumber-Authentication Process-out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/plain/TEST-functional-cucumber-Authentication Process.txt" afterPath="$PROJECT_DIR$/target/test-reports/plain/TEST-functional-cucumber-Authentication Process.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/TEST-functional-cucumber-Authentication Process.xml" afterPath="$PROJECT_DIR$/target/test-reports/TEST-functional-cucumber-Authentication Process.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" afterPath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/all.html" afterPath="$PROJECT_DIR$/target/test-reports/html/all.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/rgms/authentication/AuthController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/rgms/authentication/AuthController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/Authentication.feature" afterPath="$PROJECT_DIR$/test/cucumber/Authentication.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/AuthenticationSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/AuthenticationSteps.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chromedriver.log" afterPath="$PROJECT_DIR$/chromedriver.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/failed.html" afterPath="$PROJECT_DIR$/target/test-reports/html/failed.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/index.html" afterPath="$PROJECT_DIR$/target/test-reports/html/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/auth/login.gsp" afterPath="$PROJECT_DIR$/grails-app/views/auth/login.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
@@ -114,7 +105,7 @@
       <file leaf-file-name="Authentication.feature" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/cucumber/Authentication.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="9" selection-start="394" selection-end="441" vertical-scroll-proportion="0.0">
+            <state line="19" column="0" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,7 +114,7 @@
       <file leaf-file-name="AuthController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/rgms/authentication/AuthController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="12" selection-start="900" selection-end="900" vertical-scroll-proportion="-5.869565">
+            <state line="35" column="12" selection-start="1065" selection-end="1065" vertical-scroll-proportion="-5.869565">
               <folding>
                 <element signature="e#29#66#0" expanded="true" />
               </folding>
@@ -158,21 +149,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthenticationSteps.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AuthenticationSteps.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/cucumber/steps/AuthenticationSteps.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="48" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0">
+            <state line="43" column="66" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.29655173">
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UrlMappings.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UrlMappings.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="56" selection-start="41" selection-end="41" vertical-scroll-proportion="0.059907835">
+            <state line="4" column="56" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -235,11 +226,11 @@
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/rgms/SecurityFilters.groovy" />
         <option value="$USER_HOME$/.grails/2.1.0/projects/rgms/plugins/shiro-ui-1.2.0-SNAPSHOT/grails-app/controllers/AuthController.groovy" />
+        <option value="$PROJECT_DIR$/test/functional/pages/LoginPage.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/rgms/authentication/AuthController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
         <option value="$PROJECT_DIR$/test/cucumber/Authentication.feature" />
-        <option value="$PROJECT_DIR$/test/functional/pages/LoginPage.groovy" />
         <option value="$PROJECT_DIR$/test/cucumber/steps/AuthenticationSteps.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/rgms/authentication/AuthController.groovy" />
       </list>
     </option>
   </component>
@@ -591,10 +582,10 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32914925" sideWeight="0.5083655" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32775453" sideWeight="0.5083655" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32914925" sideWeight="0.48713" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32947233" sideWeight="0.67085075" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.48713" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32947233" sideWeight="0.67224544" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.497426" order="7" side_tool="false" content_ui="tabs" />
@@ -605,7 +596,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24903475" sideWeight="0.67085075" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32775453" sideWeight="0.48970398" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32775453" sideWeight="0.48713" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -755,13 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/cucumber/Authentication.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="9" selection-start="394" selection-end="441" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/auth/login.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.0816326">
@@ -771,26 +755,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/rgms/authentication/AuthController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="12" selection-start="900" selection-end="900" vertical-scroll-proportion="-5.869565">
+        <state line="35" column="12" selection-start="1065" selection-end="1065" vertical-scroll-proportion="-5.869565">
           <folding>
             <element signature="e#29#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/cucumber/steps/AuthenticationSteps.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="48" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
+        <state line="4" column="56" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
+    <entry file="file://$PROJECT_DIR$/test/cucumber/Authentication.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="56" selection-start="41" selection-end="41" vertical-scroll-proportion="0.059907835">
+        <state line="19" column="0" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/cucumber/steps/AuthenticationSteps.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="66" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.29655173">
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,3 +1,4 @@
+import org.apache.shiro.SecurityUtils
 import pages.ArticleCreatePage
 import pages.ArticlesPage
 import pages.LoginPage
@@ -36,3 +37,19 @@ Then(~'A login failure message is displayed'){ ->
     at LoginPage
     assert (page.flashMessage() != null)
 }
+
+      /*
+Given (~'I am not logged') {
+    assert SecurityUtils.subject?.principal == null
+}
+
+When (~'I access the Publications Menu Page') {
+    to LoginPage
+    at LoginPage
+    page.fillLoginData("admin", "adminadmin")
+}
+
+Then (~'I am redirected to the Login Page') {
+    at LoginPage
+}              */
+
