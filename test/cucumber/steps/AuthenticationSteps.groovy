@@ -6,9 +6,28 @@ import pages.RegistrationPage
 import pages.MembersListPage
 import pages.PublicationsPage
 import rgms.publication.Periodico
+import rgms.member.Member
+import rgms.member.MemberController
 import steps.TestDataAndOperations
 
 import static cucumber.api.groovy.EN.*
+
+Given (~'The system has no user with an "([^"]*)"') {String emailInvalido  ->
+    Member usuario = Member.findByEmail(emailInvalido)
+    assert usuario == null
+}
+
+When (~'I try to create a "([^"]*)" with an "([^"]*)"') {String novoUsuario, String emailInvalido  ->
+    Member usuario = Member.findByUsername(novoUsuario)
+    assert usuario == null
+}
+
+Then (~'It won\'t save the "([^"]*)" with the "([^"]*)"') {String novoUsuario, String emailInvalido ->
+    Member novo = new Member(name: "novo usuario",username: novoUsuario,passwordHash: "senha",email: emailInvalido,status: "Graduate Student"
+            ,university: "UFPE",enabled: false);
+    assert !novo.save()
+
+}
 
 Given(~'I am at the Member Listagem page') { ->
     to LoginPage
@@ -65,4 +84,21 @@ Then (~'I am redirected to the Login Page') { ->
     at LoginPage
 
 }
+
+Given (~'I\'m at the login page') {    ->
+    to LoginPage
+    assert Member.findByUsername("naoHabilitado") != null
+}
+
+When (~'I miss the password for a user that is not enabled') {  ->
+    at LoginPage
+    page.fillLoginData("naoHabilitado", "senhaerrada")
+}
+
+Then (~'A message of login failed is displayed') { ->
+    at LoginPage
+    assert page.flashMessage() != null
+
+}
+
 

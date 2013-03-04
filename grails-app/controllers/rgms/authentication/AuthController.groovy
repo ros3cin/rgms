@@ -37,11 +37,8 @@ class AuthController {
             return
         }
         print("ENTROU no signIn\nEnabled == "+member.enabled)
-        
-        if(member.enabled == false){
-            render "Please wait the administrator to unlock your access to system.\n\nThanks."
-            return
-        }
+
+
         
         def authToken = new UsernamePasswordToken(params.username, params.password as String)
 
@@ -67,7 +64,10 @@ class AuthController {
             // will be thrown if the username is unrecognised or the
             // password is incorrect.
             SecurityUtils.subject.login(authToken)
-            
+            if(member.enabled == false){
+                render "Please wait the administrator to unlock your access to system.\n\nThanks."
+                return
+            }
             print("ENTROU NO TRY")
             
             def user = Member.findByUsername(params.username)
@@ -104,7 +104,7 @@ class AuthController {
             log.info "Authentication failure for user '${params.username}'."
             flash.message = message(code: "login.failed")
             // Now redirect back to the login page.
-            redirect(uri: "/")
+            redirect(uri: "/auth/login")
 //            redirect(action: "login", params: m) //action: "login"
         }
     }
