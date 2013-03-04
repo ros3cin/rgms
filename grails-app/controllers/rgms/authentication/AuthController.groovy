@@ -215,13 +215,18 @@ class AuthController {
 //    }
     
     def register = {
-        
+        String defaultUniversity = "Federal University of Pernambuco"
+        params.university = params.university ?: defaultUniversity
+        println("aquiiiii: " + params.university)
+
+        def memberInstance = new Member(university: params.university)
+
         print("ENTROU no register")
         
         if (params.password1 != params.password2) {
             flash.message = "Please enter same passwords."
             flash.status = "error"
-            return
+            return [memberInstance: memberInstance]
         }
         
         if (!grailsApplication.config.grails.mail.username) {
@@ -230,14 +235,14 @@ class AuthController {
         
         if(params.username == null){
             print("params NULL")
-            return
+            return [memberInstance: memberInstance]
         }
 
         def enabled = false
         
         def pwdHash = new Sha256Hash(params.password1).toHex()
         
-        def memberInstance = new Member(username:params.username,name:params.name, status:params.status, passwordHash: pwdHash, email:params.email, passwordChangeRequiredOnNextLogon:false, enabled:enabled, university:params.university)
+        memberInstance = new Member(username:params.username,name:params.name, status:params.status, passwordHash: pwdHash, email:params.email, passwordChangeRequiredOnNextLogon:false, enabled:enabled, university:params.university)
         def username = memberInstance?.username
         def password = params.passwordHash
         def name = memberInstance?.name
