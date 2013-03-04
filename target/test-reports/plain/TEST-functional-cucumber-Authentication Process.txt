@@ -1,23 +1,62 @@
 Testsuite: Authentication Process
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 9,724 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 20,542 sec
 ------------- Standard Output ---------------
 Feature: Authentication Process
   As a registered member in the system
   I want to have access to all of its internal features, which are only accessible after a successful login procedure
 
 --Output from --
-  Scenario:                                            # Authentication.feature:5
+  #@ignore
+  Scenario:                                            # Authentication.feature:6
 ENTROU no signIn
-Enabled == trueENTROU NO TRYJefferson Almeida    Given I am at the Member Listagem page             # AuthenticationSteps.groovy:11
-    When I select the "Principal" menu option          # AuthenticationSteps.groovy:20
-    Then I am redirected to the Publications Menu page # AuthenticationSteps.groovy:24
+Enabled == truetargeturi: 
+ENTROU NO TRYJefferson Almeida    Given I am at the Member Listagem page             # AuthenticationSteps.groovy:32
+    When I select the "Principal" menu option          # AuthenticationSteps.groovy:41
+    Then I am redirected to the Publications Menu page # AuthenticationSteps.groovy:45
+
+--Output from --
+  #@ignore
+  Scenario:                                              # Authentication.feature:12
+    Given I am at the Login Page                         # AuthenticationSteps.groovy:49
+    When I try to login with an user that does not exist # AuthenticationSteps.groovy:52
+    Then A login failure message is displayed            # AuthenticationSteps.groovy:56
+
+--Output from --
+  #@ignore
+  Scenario:                                                                                   # Authentication.feature:18
+ENTROU no registerparams NULL    Given I am at the Registration Page                                                       # AuthenticationSteps.groovy:61
+ENTROU no register    When I register a user with success                                                       # AuthenticationSteps.groovy:64
+    Then A message indicating the user was successfully registered is displayed at login page # AuthenticationSteps.groovy:68
+
+--Output from --
+  #@ignore
+  Scenario:                                                   # Authentication.feature:24
+    Given The system has no user with an "invalid email"      # AuthenticationSteps.groovy:15
+    When I try to create a "newuser" with an "invalid email"  # AuthenticationSteps.groovy:20
+    Then It won't save the "newuser" with the "invalid email" # AuthenticationSteps.groovy:25
+
+--Output from --
+  Scenario:                                                 # Authentication.feature:29
+    Given I'm at the login page                             # AuthenticationSteps.groovy:88
+ENTROU no signIn
+Enabled == falsetargeturi: 
+    When I miss the password for a user that is not enabled # AuthenticationSteps.groovy:93
+    Then A message of login failed is displayed             # AuthenticationSteps.groovy:98
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 
 --Output from --Started ChromeDriver
-port=39182
+port=6080
 version=26.0.1383.0
-log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsTeste\chromedriver.log
-------------- ---------------- ---------------
+log=C:\Users\RENATO\IdeaProjects\flavioTest\chromedriver.log
 
-Testcase:  took 9,578 sec
+--Output from --
+--Output from --
+--Output from --
+--Output from --------------- ---------------- ---------------
+
+Testcase:  took 15,622 sec
+Testcase:  took 0,837 sec
+Testcase:  took 3,066 sec
+Testcase:  took 0,047 sec
+Testcase:  took 0,756 sec
