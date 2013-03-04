@@ -1,22 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Flavio-PCW" name="Authentication Process" tests="1" time="9.724" timestamp="2013-03-02T17:30:42">
+<testsuite errors="0" failures="0" hostname="Flavio-PCW" name="Authentication Process" tests="4" time="12.248" timestamp="2013-03-04T04:02:12">
   <properties />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="9.578" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="9.655" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.165" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.133" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="2.148" />
   <system-out><![CDATA[Feature: Authentication Process
   As a registered member in the system
   I want to have access to all of its internal features, which are only accessible after a successful login procedure
 
 --Output from --
-  Scenario:                                            # Authentication.feature:5
+  #Issue#76 - Usuário é direcionado para tela de login repetidas vezes
+  Scenario:                                            # Authentication.feature:7
 ENTROU no signIn
-Enabled == trueENTROU NO TRYJefferson Almeida    Given I am at the Member Listagem page             # AuthenticationSteps.groovy:11
-    When I select the "Principal" menu option          # AuthenticationSteps.groovy:20
-    Then I am redirected to the Publications Menu page # AuthenticationSteps.groovy:24
+Enabled == truetargeturi: 
+ENTROU NO TRYJefferson Almeida    Given I am at the Member Listagem page             # AuthenticationSteps.groovy:40
+    When I select the "Principal" menu option          # AuthenticationSteps.groovy:49
+    Then I am redirected to the Publications Menu page # AuthenticationSteps.groovy:23
+
+--Output from --
+  #Duas telas diferentes de login existentes durante a navegação: uma 'oficial', acessada pelo caminho auth/login, e outra
+  #encontrada no caminho raiz '/' da aplicação
+  Scenario:                                     # Authentication.feature:15
+    Given I am not logged                       # AuthenticationSteps.groovy:70
+    When I directly access the Member List Page # AuthenticationSteps.groovy:36
+    Then I am redirected to the Login Page      # AuthenticationSteps.groovy:27
+
+--Output from --
+  Scenario:                                # Authentication.feature:20
+    Given I am not logged                  # AuthenticationSteps.groovy:70
+    When I access the Root Page            # AuthenticationSteps.groovy:31
+    Then I am redirected to the Login Page # AuthenticationSteps.groovy:27
+
+--Output from --
+  #Issue#9 - Preencher com valores default campos de formulários quando relevante
+  Scenario:                                                                    # Authentication.feature:27
+    Given I am at the Login Page                                               # AuthenticationSteps.groovy:53
+aquiiiii: Federal University of Pernambuco
+ENTROU no registerparams NULL    When I click the "Create an account" link                                  # AuthenticationSteps.groovy:58
+    Then I am at the User Register Page                                        # AuthenticationSteps.groovy:62
+    And The University field is filled with "Federal University of Pernambuco" # AuthenticationSteps.groovy:66
 ]]></system-out>
   <system-err><![CDATA[
 --Output from --Started ChromeDriver
-port=39182
+port=4929
 version=26.0.1383.0
 log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsTeste\chromedriver.log
-]]></system-err>
+
+--Output from --
+--Output from --
+--Output from --]]></system-err>
 </testsuite>

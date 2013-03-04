@@ -22,6 +22,8 @@ class MemberController {
     }
 
     def create = {
+        println "fdffdfdf: " + params.toString()
+        println "fdffdfdf: " + params
 		def member = new Member(params)
 
         [memberInstance: member]

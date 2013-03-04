@@ -9,6 +9,7 @@ class MembersListPage extends Page {
 
     static at = {
         title ==~ /Member Listagem/
+
     }
 
     static content = {

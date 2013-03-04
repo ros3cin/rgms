@@ -39,7 +39,9 @@
 <div class="header">
 <h2>Authentication Process</h2>
 <h3>
-                        A single test executed
+                        Executed
+                        4
+                        tests
                     
                         without a single error or failure!
                     </h3>
@@ -49,7 +51,37 @@
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 9.578 seconds.</p>
+<p class="summary">Executed in 9.655 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success"></b>
+</p>
+<p class="summary">Executed in 0.165 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success"></b>
+</p>
+<p class="summary">Executed in 0.133 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success"></b>
+</p>
+<p class="summary">Executed in 2.148 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -62,21 +94,49 @@
   I want to have access to all of its internal features, which are only accessible after a successful login procedure
 
 --Output from --
-  Scenario:                                            # Authentication.feature:5
+  #Issue#76 - Usu&aacute;rio &eacute; direcionado para tela de login repetidas vezes
+  Scenario:                                            # Authentication.feature:7
 ENTROU no signIn
-Enabled == trueENTROU NO TRYJefferson Almeida    Given I am at the Member Listagem page             # AuthenticationSteps.groovy:11
-    When I select the "Principal" menu option          # AuthenticationSteps.groovy:20
-    Then I am redirected to the Publications Menu page # AuthenticationSteps.groovy:24
+Enabled == truetargeturi: 
+ENTROU NO TRYJefferson Almeida    Given I am at the Member Listagem page             # AuthenticationSteps.groovy:40
+    When I select the "Principal" menu option          # AuthenticationSteps.groovy:49
+    Then I am redirected to the Publications Menu page # AuthenticationSteps.groovy:23
+
+--Output from --
+  #Duas telas diferentes de login existentes durante a navega&ccedil;&atilde;o: uma 'oficial', acessada pelo caminho auth/login, e outra
+  #encontrada no caminho raiz '/' da aplica&ccedil;&atilde;o
+  Scenario:                                     # Authentication.feature:15
+    Given I am not logged                       # AuthenticationSteps.groovy:70
+    When I directly access the Member List Page # AuthenticationSteps.groovy:36
+    Then I am redirected to the Login Page      # AuthenticationSteps.groovy:27
+
+--Output from --
+  Scenario:                                # Authentication.feature:20
+    Given I am not logged                  # AuthenticationSteps.groovy:70
+    When I access the Root Page            # AuthenticationSteps.groovy:31
+    Then I am redirected to the Login Page # AuthenticationSteps.groovy:27
+
+--Output from --
+  #Issue#9 - Preencher com valores default campos de formul&aacute;rios quando relevante
+  Scenario:                                                                    # Authentication.feature:27
+    Given I am at the Login Page                                               # AuthenticationSteps.groovy:53
+aquiiiii: Federal University of Pernambuco
+ENTROU no registerparams NULL    When I click the "Create an account" link                                  # AuthenticationSteps.groovy:58
+    Then I am at the User Register Page                                        # AuthenticationSteps.groovy:62
+    And The University field is filled with "Federal University of Pernambuco" # AuthenticationSteps.groovy:66
 </pre>
 </div>
 <div class="syserr">
 <h2>System error</h2>
 <pre class="syserr">
 --Output from --Started ChromeDriver
-port=39182
+port=4929
 version=26.0.1383.0
 log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsTeste\chromedriver.log
-</pre>
+
+--Output from --
+--Output from --
+--Output from --</pre>
 </div>
 </div>
 <div class="clear"></div>
