@@ -1,5 +1,5 @@
 Testsuite: Authentication Process
-Tests run: 10, Failures: 1, Errors: 0, Time elapsed: 24,212 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 25,689 sec
 ------------- Standard Output ---------------
 Feature: Authentication Process
   As a registered member in the system
@@ -29,19 +29,7 @@ ENTROU no registerparams NULL    Given I am at the User Register Page           
 user: null
 validate: null
 errors: null
-    When I register a user with success                                         # AuthenticationSteps.groovy:85
-      Assertion failed: 
-      
-      assert ( page.createNewUser() != null )
-               |    |               |
-               |    null            false
-               UserRegisterPage
-      
-      	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:386)
-      	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:658)
-      	at AuthenticationSteps$_run_closure16.doCall(AuthenticationSteps.groovy:86)
-      	at ✽.When I register a user with success(Authentication.feature:25)
-
+ENTROU no register    When I register a user with success                                         # AuthenticationSteps.groovy:85
     And I am redirected to the User Register Page                               # AuthenticationSteps.groovy:34
     Then A message indicating the user was successfully registered is displayed # AuthenticationSteps.groovy:88
 
@@ -110,7 +98,7 @@ ENTROU no register    And I submit the form                                     
 ------------- Standard Error -----------------
 
 --Output from --Started ChromeDriver
-port=43285
+port=28870
 version=26.0.1383.0
 log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsmerge\rgmsmerge\chromedriver.log
 
@@ -124,28 +112,13 @@ log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsmerge\rgmsmerge\chromedriver.log
 --Output from --
 --Output from --------------- ---------------- ---------------
 
-Testcase:  took 7,648 sec
-Testcase:  took 0,846 sec
-Testcase:  took 4,092 sec
-	FAILED
-assert ( page.createNewUser() != null )
-         |    |               |
-         |    null            false
-         UserRegisterPage
-Assertion failed: 
-
-assert ( page.createNewUser() != null )
-         |    |               |
-         |    null            false
-         UserRegisterPage
-
-	at AuthenticationSteps$_run_closure16.doCall(AuthenticationSteps.groovy:86)
-	at ✽.When I register a user with success(Authentication.feature:25)
-
-Testcase:  took 0,04 sec
-Testcase:  took 0,854 sec
-Testcase:  took 0,17 sec
-Testcase:  took 0,175 sec
-Testcase:  took 1,242 sec
-Testcase:  took 2,929 sec
-Testcase:  took 6,017 sec
+Testcase:  took 8,026 sec
+Testcase:  took 0,861 sec
+Testcase:  took 5,17 sec
+Testcase:  took 0,042 sec
+Testcase:  took 0,841 sec
+Testcase:  took 0,218 sec
+Testcase:  took 0,195 sec
+Testcase:  took 1,26 sec
+Testcase:  took 2,849 sec
+Testcase:  took 6,092 sec

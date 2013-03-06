@@ -35,7 +35,7 @@
 </nav>
 </div>
 <div class="clear"></div>
-<div class="testsuite failure">
+<div class="testsuite success">
 <div class="header">
 <h2>Authentication Process</h2>
 <h3>
@@ -43,9 +43,7 @@
                         10
                         tests
                     
-                        with
-                        one failure
-                        .
+                        without a single error or failure!
                     </h3>
 </div>
 <div class="testcase clearfix success grid_8 alpha omega" data-name="">
@@ -53,7 +51,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 7.648 seconds.</p>
+<p class="summary">Executed in 8.026 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -63,46 +61,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 0.846 seconds.</p>
-</div>
-<div class="grid_5 omega outputinfo"></div>
-<div class="clear"></div>
-</div>
-<div class="testcase clearfix failure grid_8 alpha omega" data-name="">
-<div class="grid_3 alpha">
-<p>
-<span class="icon failure"></span><b class="testname message failure"></b>
-</p>
-<p class="summary">Executed in 4.125 seconds.</p>
-</div>
-<div class="grid_5 omega outputinfo">
-<div class="details">
-<p>
-<b class="message">assert ( page.createNewUser() != null )
-         |    |               |
-         |    null            false
-         UserRegisterPage</b>
-</p>
-<pre>Assertion failed: 
-
-assert ( page.createNewUser() != null )
-         |    |               |
-         |    null            false
-         UserRegisterPage
-
-	at AuthenticationSteps$_run_closure16.doCall(AuthenticationSteps.groovy:86)
-	at ✽.When I register a user with success(Authentication.feature:25)
-</pre>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="">
-<div class="grid_3 alpha">
-<p>
-<span class="icon success"></span><b class="testname message success"></b>
-</p>
-<p class="summary">Executed in 0.04 seconds.</p>
+<p class="summary">Executed in 0.861 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -112,7 +71,7 @@ assert ( page.createNewUser() != null )
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 0.854 seconds.</p>
+<p class="summary">Executed in 5.17 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -122,7 +81,7 @@ assert ( page.createNewUser() != null )
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 0.17 seconds.</p>
+<p class="summary">Executed in 0.042 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -132,7 +91,7 @@ assert ( page.createNewUser() != null )
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 0.175 seconds.</p>
+<p class="summary">Executed in 0.841 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -142,7 +101,7 @@ assert ( page.createNewUser() != null )
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 1.241 seconds.</p>
+<p class="summary">Executed in 0.218 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -152,7 +111,7 @@ assert ( page.createNewUser() != null )
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 2.929 seconds.</p>
+<p class="summary">Executed in 0.195 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -162,7 +121,27 @@ assert ( page.createNewUser() != null )
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 6.017 seconds.</p>
+<p class="summary">Executed in 1.26 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success"></b>
+</p>
+<p class="summary">Executed in 2.849 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success"></b>
+</p>
+<p class="summary">Executed in 6.092 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -198,19 +177,7 @@ ENTROU no registerparams NULL    Given I am at the User Register Page           
 user: null
 validate: null
 errors: null
-    When I register a user with success                                         # AuthenticationSteps.groovy:85
-      Assertion failed: 
-      
-      assert ( page.createNewUser() != null )
-               |    |               |
-               |    null            false
-               UserRegisterPage
-      
-      	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:386)
-      	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:658)
-      	at AuthenticationSteps$_run_closure16.doCall(AuthenticationSteps.groovy:86)
-      	at ✽.When I register a user with success(Authentication.feature:25)
-
+ENTROU no register    When I register a user with success                                         # AuthenticationSteps.groovy:85
     And I am redirected to the User Register Page                               # AuthenticationSteps.groovy:34
     Then A message indicating the user was successfully registered is displayed # AuthenticationSteps.groovy:88
 
@@ -281,7 +248,7 @@ ENTROU no register    And I submit the form                                     
 <h2>System error</h2>
 <pre class="syserr">
 --Output from --Started ChromeDriver
-port=43285
+port=28870
 version=26.0.1383.0
 log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsmerge\rgmsmerge\chromedriver.log
 

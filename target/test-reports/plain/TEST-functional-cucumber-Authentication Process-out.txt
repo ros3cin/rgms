@@ -26,19 +26,7 @@ ENTROU no registerparams NULL    Given I am at the User Register Page           
 user: null
 validate: null
 errors: null
-    When I register a user with success                                         # AuthenticationSteps.groovy:85
-      Assertion failed: 
-      
-      assert ( page.createNewUser() != null )
-               |    |               |
-               |    null            false
-               UserRegisterPage
-      
-      	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:386)
-      	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:658)
-      	at AuthenticationSteps$_run_closure16.doCall(AuthenticationSteps.groovy:86)
-      	at ✽.When I register a user with success(Authentication.feature:25)
-
+ENTROU no register    When I register a user with success                                         # AuthenticationSteps.groovy:85
     And I am redirected to the User Register Page                               # AuthenticationSteps.groovy:34
     Then A message indicating the user was successfully registered is displayed # AuthenticationSteps.groovy:88
 

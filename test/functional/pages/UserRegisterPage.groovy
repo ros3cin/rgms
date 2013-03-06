@@ -33,7 +33,7 @@ class UserRegisterPage extends Page {
         name.value(user.name);
         username.value(user.username);
         password1.value(user.password);
-        password2(user.password);
+        password2.value(user.password);
         email.value(user.email);
         university.value(user.university);
         status.value(user.status);
