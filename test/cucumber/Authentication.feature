@@ -44,7 +44,7 @@ Scenario:
   And A login failure message is displayed
 
 
- #Duas telas diferentes de login existentes durante a navegação: uma 'oficial', acessada pelo caminho auth/login, e outra
+ #Issue#86 - Duas telas diferentes de login existentes durante a navegação: uma 'oficial', acessada pelo caminho auth/login, e outra
  #encontrada no caminho raiz '/' da aplicação
 
 Scenario:

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="Flavio-PCW" id="0" name="Authentication Process" package="" tests="10" time="25.689" timestamp="2013-03-06T05:40:22">
+  <testsuite errors="0" failures="0" hostname="Flavio-PCW" id="0" name="Authentication Process" package="" tests="10" time="25.78" timestamp="2013-03-06T06:55:41">
       <properties />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="8.026" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="7.842" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.861" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.944" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="5.17" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="5.341" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.042" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.041" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.841" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.83" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.218" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.22" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.195" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.2" />
 
       <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="1.26" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="2.849" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="2.846" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="6.092" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="6.08" />
 
       <system-out><![CDATA[Feature: Authentication Process
   As a registered member in the system
@@ -74,7 +74,7 @@ Enabled == false    When I miss the password for "naoHabilitado" username       
     And A login failure message is displayed                    # AuthenticationSteps.groovy:77
 
 --Output from --
-  #Duas telas diferentes de login existentes durante a navegação: uma 'oficial', acessada pelo caminho auth/login, e outra
+  #Issue#86 - Duas telas diferentes de login existentes durante a navegação: uma 'oficial', acessada pelo caminho auth/login, e outra
   #encontrada no caminho raiz '/' da aplicação
   Scenario:                                     # Authentication.feature:50
     Given I am not logged                       # AuthenticationSteps.groovy:149
@@ -120,7 +120,7 @@ ENTROU no register    And I submit the form                                     
 
       <system-err><![CDATA[
 --Output from --Started ChromeDriver
-port=28870
+port=20150
 version=26.0.1383.0
 log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsmerge\rgmsmerge\chromedriver.log
 

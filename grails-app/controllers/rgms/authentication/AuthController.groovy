@@ -257,9 +257,6 @@ class AuthController {
             return
         }
 
-        params.remove("name")
-        params.name = ""
-
         def Admin = Member.findAllByName("Administrator")
         def emailAdmin = Admin?.email
         if(emailAdmin != null && !emailAdmin.empty){
@@ -283,7 +280,7 @@ class AuthController {
 //        redirect(action: "index", id: memberInstance.id)
 
         flash.message = "User successfully created";
-        render(view: "register", model: [memberInstance: memberInstance])
+        render(view: "register")
 
     }
 }

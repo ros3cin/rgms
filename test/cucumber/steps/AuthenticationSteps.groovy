@@ -118,7 +118,7 @@ Then (~'The University field is filled with "([^"]*)"') { defaultName ->
 When (~'I mistype my password at the second password field') { ->
     def user = TestDataAuthentication.findByUsername("user186")
     page.password1.value(user.password)
-    page.password2.value(user.password)
+    page.password2.value(user.password+"aa")
 }
 When (~'I fill my remaining user data') { ->
     def user = TestDataAuthentication.findByUsername("user186")

@@ -49,7 +49,7 @@ Enabled == false    When I miss the password for "naoHabilitado" username       
     And A login failure message is displayed                    # AuthenticationSteps.groovy:77
 
 --Output from --
-  #Duas telas diferentes de login existentes durante a navegação: uma 'oficial', acessada pelo caminho auth/login, e outra
+  #Issue#86 - Duas telas diferentes de login existentes durante a navegação: uma 'oficial', acessada pelo caminho auth/login, e outra
   #encontrada no caminho raiz '/' da aplicação
   Scenario:                                     # Authentication.feature:50
     Given I am not logged                       # AuthenticationSteps.groovy:149

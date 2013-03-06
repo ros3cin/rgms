@@ -116,11 +116,11 @@ margin-top: 0;
           <tbody>
             <tr>
               <td style="text-align: right; font-size: 14px;">Name: </td>
-              <td><input type="text" name="name" required="true" value="${memberInstance.name}" style="font-size: 12px; font-weight: bold; border: solid 1px #d0d0d0; height: 23px; width: 250px;"/></td>
+              <td><input type="text" name="name" required="true" value="${memberInstance?.name}" style="font-size: 12px; font-weight: bold; border: solid 1px #d0d0d0; height: 23px; width: 250px;"/></td>
             </tr>
             <tr>
               <td style="text-align: right; font-size: 14px;">Username: </td>
-              <td><input type="text" name="username" required="true" value="${memberInstance.username}" style="font-size: 12px; font-weight: bold; border: solid 1px #d0d0d0; height: 23px; width: 250px;"/></td>
+              <td><input type="text" name="username" required="true" value="${memberInstance?.username}" style="font-size: 12px; font-weight: bold; border: solid 1px #d0d0d0; height: 23px; width: 250px;"/></td>
             </tr>
             <tr>
               <td style="text-align: right; font-size: 14px;">Password: </td>
@@ -132,7 +132,7 @@ margin-top: 0;
             </tr>
             <tr>
               <td style="text-align: right; font-size: 14px;">Email: </td>
-              <td><input type="text" name="email" required="true" value="${memberInstance.email}" style="font-size: 12px; font-weight: bold; border: solid 1px #d0d0d0; height: 23px; width: 250px;"/></td>
+              <td><input type="text" name="email" required="true" value="${memberInstance?.email}" style="font-size: 12px; font-weight: bold; border: solid 1px #d0d0d0; height: 23px; width: 250px;"/></td>
             </tr>
             <tr>
               <td style="text-align: right; font-size: 14px;">University: </td>
@@ -156,7 +156,7 @@ margin-top: 0;
             </tr>-->
             <tr>
               <td style="text-align: right; font-size: 14px;">Status: </td>
-              <td><g:select name="status" required="true" from="${["Graduate Student", "MSc Student", "PhD Student", "Professor", "Researcher"]}" value="${memberInstance.status}" noSelection="['':'-Choose your status-']"/></td>
+              <td><g:select name="status" required="true" from="${["Graduate Student", "MSc Student", "PhD Student", "Professor", "Researcher"]}" value="${memberInstance?.status}" noSelection="['':'-Choose your status-']"/></td>
           </tr>       
 
 

@@ -1,5 +1,5 @@
 Testsuite: Authentication Process
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 25,689 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 25,78 sec
 ------------- Standard Output ---------------
 Feature: Authentication Process
   As a registered member in the system
@@ -52,7 +52,7 @@ Enabled == false    When I miss the password for "naoHabilitado" username       
     And A login failure message is displayed                    # AuthenticationSteps.groovy:77
 
 --Output from --
-  #Duas telas diferentes de login existentes durante a navegação: uma 'oficial', acessada pelo caminho auth/login, e outra
+  #Issue#86 - Duas telas diferentes de login existentes durante a navegação: uma 'oficial', acessada pelo caminho auth/login, e outra
   #encontrada no caminho raiz '/' da aplicação
   Scenario:                                     # Authentication.feature:50
     Given I am not logged                       # AuthenticationSteps.groovy:149
@@ -98,7 +98,7 @@ ENTROU no register    And I submit the form                                     
 ------------- Standard Error -----------------
 
 --Output from --Started ChromeDriver
-port=28870
+port=20150
 version=26.0.1383.0
 log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsmerge\rgmsmerge\chromedriver.log
 
@@ -112,13 +112,13 @@ log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsmerge\rgmsmerge\chromedriver.log
 --Output from --
 --Output from --------------- ---------------- ---------------
 
-Testcase:  took 8,026 sec
-Testcase:  took 0,861 sec
-Testcase:  took 5,17 sec
-Testcase:  took 0,042 sec
-Testcase:  took 0,841 sec
-Testcase:  took 0,218 sec
-Testcase:  took 0,195 sec
+Testcase:  took 7,842 sec
+Testcase:  took 0,944 sec
+Testcase:  took 5,341 sec
+Testcase:  took 0,041 sec
+Testcase:  took 0,83 sec
+Testcase:  took 0,22 sec
+Testcase:  took 0,2 sec
 Testcase:  took 1,26 sec
-Testcase:  took 2,849 sec
-Testcase:  took 6,092 sec
+Testcase:  took 2,846 sec
+Testcase:  took 6,08 sec
