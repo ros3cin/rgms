@@ -51,14 +51,6 @@ class BootStrap {
             println("foi aqui...")  */
         }
 
-        Member usuarioNaoHabilitado = Member.findByUsername("naoHabilitado")
-        if (!usuarioNaoHabilitado){
-            usuarioNaoHabilitado = new Member(name:"Usuario Nao Habilitado",username: 'naoHabilitado', passwordHash: new Sha256Hash("senha").toHex(),
-                    email:"naohabilitado@cin.ufpe.br", status:"Graduate Student", enabled:false, university:"UFPE")
-            if (usuarioNaoHabilitado.save()){
-                print("Usuario naoHabilitado foi criado");
-            }
-        }
 
 		ResearchLine rl = new ResearchLine()
 		rl.setName("Empirical Software Engineering")
