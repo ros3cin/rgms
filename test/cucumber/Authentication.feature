@@ -29,9 +29,9 @@ Scenario:
  #Issue#69 - Informar quando tentar cadastrar novo usuário com e-mail inválido
 
 Scenario:
-  Given The system has no user with the "invalid email abcde" email
+  Given I am at the Login Page
   When I try to create a "newuser" username with the "invalid email abcde" email
-  Then It won't save the "newuser" username with the "invalid email abcde" email
+  Then A message indicating the email is invalid is displayed
 
  #Issue#67 - Durante o login, ao errar o password de um usuário existente, cuja conta ainda não foi liberada pelo
  #administrador, redirecionar à Tela de login e exibir uma mensagem de 'usuário ou senha inválida'

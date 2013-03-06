@@ -2,6 +2,7 @@ import geb.Browser
 import geb.ConfigurationLoader
 import org.apache.commons.validator.EmailValidator
 import org.apache.shiro.SecurityUtils
+import org.apache.shiro.crypto.hash.Sha256Hash
 import org.openqa.selenium.Capabilities
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
@@ -77,9 +78,6 @@ When (~'I try to login with an existent user, though with wrong password') {->
 Then(~'A login failure message is displayed'){ ->
     assert ( page.readFlashMessage() != null )
 }
-Given (~'The system has no user with the "([^"]*)" email') {String email ->
-    assert( Member.findByEmail(email) == null )
-}
 
 
 When(~'I register a user with success')  {  ->
@@ -91,6 +89,12 @@ Then(~'A message indicating the user was successfully registered is displayed'){
 
 
 Given (~'The user of "([^"]*)" username is not yet enabled') { username ->
+    Member usuarioNaoHabilitado = Member.findByUsername("naoHabilitado")
+    if (!usuarioNaoHabilitado){
+        usuarioNaoHabilitado = new Member(name:"Usuario Nao Habilitado",username: 'naoHabilitado', passwordHash: new Sha256Hash("senha").toHex(),
+                email:"naohabilitado@cin.ufpe.br", status:"Graduate Student", enabled:false, university:"UFPE")
+        usuarioNaoHabilitado.save()
+    }
     def user = Member.findByUsername(username)
     assert( !user?.enabled )
 }
@@ -100,14 +104,22 @@ When (~'I miss the password for "([^"]*)" username') { username ->
 
 
 When (~'I try to create a "([^"]*)" username with the "([^"]*)" email') {String novoUsuario, String emailInvalido  ->
-    Member usuario = Member.findByUsername(novoUsuario)
-    assert usuario == null
+    to UserRegisterPage
+    at UserRegisterPage
+    page.university = "UFPE"
+    page.name = "usuarioTeste"
+    page.username = novoUsuario
+    page.email = emailInvalido
+    page.password1 = "senha123"
+    page.password2 = "senha123"
+    page.status = "Graduate Student"
+
 }
-Then (~'It won\'t save the "([^"]*)" username with the "([^"]*)" email') {String novoUsuario, String emailInvalido ->
-    Member novo = new Member(name: "novo usuario",username: novoUsuario,passwordHash: "senha",email: emailInvalido,status: "Graduate Student"
-            ,university: "UFPE",enabled: false);
-    assert !novo.save()
+Then (~"A message indicating the email is invalid is displayed") { ->
+    page.submitForm()
+    assert (page.readErrorsMessage() != null)
 }
+
 
 
 Then (~'The University field is filled with "([^"]*)"') { defaultName ->
