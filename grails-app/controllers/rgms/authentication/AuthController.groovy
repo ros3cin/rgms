@@ -49,7 +49,6 @@ class AuthController {
         
         // If a controller redirected to this page, redirect back
         // to it. Otherwise redirect to the root URI.
-        println("targeturi: ${params.targetUri}")
         def targetUri = params.targetUri ?: "/"
         
         // Handle requests saved by Shiro filters.
@@ -217,17 +216,18 @@ class AuthController {
     def register = {
         String defaultUniversity = "Federal University of Pernambuco"
         params.university = params.university ?: defaultUniversity
-        println("aquiiiii: " + params.university)
-
-        def memberInstance = new Member(university: params.university)
 
         print("ENTROU no register")
         
         if (params.password1 != params.password2) {
             flash.message = "Please enter same passwords."
             flash.status = "error"
-            return [memberInstance: memberInstance]
+            params.password1 = ""
+            params.password2 = ""
+            return [memberInstance: new Member(params)]
         }
+
+        def memberInstance = new Member(params)
         
         if (!grailsApplication.config.grails.mail.username) {
             throw new RuntimeException(message(code: 'mail.plugin.not.configured', 'default' : 'Mail plugin not configured'))
@@ -249,14 +249,17 @@ class AuthController {
         def emailAddress = memberInstance?.email
         
         if (!memberInstance.save(flush: true)) {
-            flash.message = "Error creating user"
+            //flash.message = "Error creating user"
             render(view: "register", model: [memberInstance: memberInstance])
             memberInstance.errors.each{
                 println it
             }
             return
         }
-        
+
+        params.remove("name")
+        params.name = ""
+
         def Admin = Member.findAllByName("Administrator")
         def emailAdmin = Admin?.email
         if(emailAdmin != null && !emailAdmin.empty){

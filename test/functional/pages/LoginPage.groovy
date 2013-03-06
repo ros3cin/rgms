@@ -6,29 +6,27 @@ class LoginPage extends Page {
     static url = "auth/login"
 
     static at = {
-        title ==~ /Login/// || title ==~ /RGMS/
+        title ==~ /Login/ && rememberMe != null
     }
 
     static content = {
-        //rememberMe {$("form").find("input#rememberMe")}
         rememberMe {$("form input#rememberMe")}
+        readFlashMessage(){ $("div .message").text() }
+        readErrorsMessage(){ $("div .errors").text()}
     }
 
-    def submitForm = {$("form").signIn().click()}
-    def clickLink = { textLink -> $("a", text: textLink).click() }
+    def getLink (String linkName) { $("div#status a", text: linkName) }
+    def submitForm = { $("form input[type='submit']").click() }
 
-    def fillLoginDataOnly(String l, String p) {
-        $("form").username = l
-        $("form").password = p
+
+    def fillLoginDataOnly(String username, String password) {
+        $("form").username = username
+        $("form").password = password
     }
-
-    def fillLoginData(String l, String p) {
-        $("form").username = l
-        $("form").password = p
+    def fillLoginDataAndSubmit(String username, String password) {
+        $("form").username = username
+        $("form").password = password
         $("form").signIn().click()
     }
 
-    def flashMessage(){
-        $("div .message").text()
-    }
 }

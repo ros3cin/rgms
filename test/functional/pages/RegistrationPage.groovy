@@ -1,13 +1,8 @@
 package pages
 
 import geb.Page
-/**
- * Created with IntelliJ IDEA.
- * User: RENATO
- * Date: 03/03/13
- * Time: 02:24
- * To change this template use File | Settings | File Templates.
- */
+import rgms.member.Member
+
 class RegistrationPage extends Page{
     static url = "auth/register"
 
@@ -35,9 +30,14 @@ class RegistrationPage extends Page{
         $("form").university = university;
         $("form").status = status;
         $("input[type='submit']").click();
+        Member.findByUsername(username)
     }
 
     def flashMessage(){
         $("div .message").text()
+    }
+
+    def errorMessage(){
+        $("div .errors").text()
     }
 }

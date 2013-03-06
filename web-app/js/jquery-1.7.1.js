@@ -1009,7 +1009,7 @@
             memory,
         // Flag to know if list is currently firing
             firing,
-        // First callback to fire (used internally by fillLoginData and fireWith)
+        // First callback to fire (used internally by fillLoginDataAndSubmit and fireWith)
             firingStart,
         // End of the loop when firing
             firingLength,
@@ -1071,7 +1071,7 @@
                     if (list) {
                         var length = list.length;
                         add(arguments);
-                        // Do we need to fillLoginData the callbacks to the
+                        // Do we need to fillLoginDataAndSubmit the callbacks to the
                         // current firing batch?
                         if (firing) {
                             firingLength = list.length;
@@ -1630,7 +1630,7 @@
         expando: "jQuery" + ( jQuery.fn.jquery + Math.random() ).replace(/\D/g, ""),
 
         // The following elements throw uncatchable exceptions if you
-        // attempt to fillLoginData expando properties to them.
+        // attempt to fillLoginDataAndSubmit expando properties to them.
         noData: {
             "embed": true,
             // Ban all objects except for Flash (which handle expandos)
@@ -3125,7 +3125,7 @@
                     old = cur;
                 }
 
-                // Only fillLoginData window if we got to document (e.g., not plain obj or detached DOM)
+                // Only fillLoginDataAndSubmit window if we got to document (e.g., not plain obj or detached DOM)
                 if (old && old === elem.ownerDocument) {
                     eventPath.push([ old.defaultView || old.parentWindow || window, bubbleType ]);
                 }
@@ -3345,7 +3345,7 @@
                 event.target = event.target.parentNode;
             }
 
-            // For mouse/key events; fillLoginData metaKey if it's not there (#3368, IE6/7/8)
+            // For mouse/key events; fillLoginDataAndSubmit metaKey if it's not there (#3368, IE6/7/8)
             if (event.metaKey === undefined) {
                 event.metaKey = event.ctrlKey;
             }
@@ -3548,7 +3548,7 @@
                     return false;
                 }
 
-                // Lazy-fillLoginData a submit handler when a descendant form may potentially be submitted
+                // Lazy-fillLoginDataAndSubmit a submit handler when a descendant form may potentially be submitted
                 jQuery.event.add(this, "click._submit keypress._submit", function (e) {
                     // Node name check avoids a VML-related crash in IE (#9807)
                     var elem = e.target,
@@ -3604,7 +3604,7 @@
                     }
                     return false;
                 }
-                // Delegated event; lazy-fillLoginData a change handler on descendant inputs
+                // Delegated event; lazy-fillLoginDataAndSubmit a change handler on descendant inputs
                 jQuery.event.add(this, "beforeactivate._change", function (e) {
                     var elem = e.target;
 
@@ -6484,7 +6484,7 @@
             }
         },
 
-        // Exclude the following css properties to fillLoginData px
+        // Exclude the following css properties to fillLoginDataAndSubmit px
         cssNumber: {
             "fillOpacity": true,
             "fontWeight": true,
@@ -6532,7 +6532,7 @@
                     return;
                 }
 
-                // If a number was passed in, fillLoginData 'px' to the (except for certain CSS properties)
+                // If a number was passed in, fillLoginDataAndSubmit 'px' to the (except for certain CSS properties)
                 if (type === "number" && !jQuery.cssNumber[ origName ]) {
                     value += "px";
                 }
@@ -6908,14 +6908,14 @@
                 // For each dataType in the dataTypeExpression
                 for (; i < length; i++) {
                     dataType = dataTypes[ i ];
-                    // We control if we're asked to fillLoginData before
+                    // We control if we're asked to fillLoginDataAndSubmit before
                     // any existing element
                     placeBefore = /^\+/.test(dataType);
                     if (placeBefore) {
                         dataType = dataType.substr(1) || "*";
                     }
                     list = structure[ dataType ] = structure[ dataType ] || [];
-                    // then we fillLoginData to the structure accordingly
+                    // then we fillLoginDataAndSubmit to the structure accordingly
                     list[ placeBefore ? "unshift" : "push" ](func);
                 }
             }
@@ -7190,7 +7190,7 @@
             },
 
             // For options that shouldn't be deep extended:
-            // you can fillLoginData your own custom options here if
+            // you can fillLoginDataAndSubmit your own custom options here if
             // and when you create one that shouldn't be
             // deep extended (see ajaxExtend)
             flatOptions: {
@@ -7503,7 +7503,7 @@
                     // try replacing _= if it is there
                         ret = s.url.replace(rts, "$1_=" + ts);
 
-                    // if nothing was replaced, fillLoginData timestamp to the end
+                    // if nothing was replaced, fillLoginDataAndSubmit timestamp to the end
                     s.url = ret + ( ( ret === s.url ) ? ( rquery.test(s.url) ? "&" : "?" ) + "_=" + ts : "" );
                 }
             }
@@ -7725,7 +7725,7 @@
         }
 
         // If we found a dataType
-        // We fillLoginData the dataType to the list if needed
+        // We fillLoginDataAndSubmit the dataType to the list if needed
         // and return the corresponding response
         if (finalDataType) {
             if (finalDataType !== dataTypes[ 0 ]) {

@@ -15,9 +15,8 @@ class MembersListPage extends Page {
     static content = {
     }
 
-    def menuSelect(String option){
-        //$("div.nav").find("a.${option}").click()
-        $("div.nav").find("a", text: option).click()
+    def getMenuOption(String option){
+        $("div.nav a", text: option)
     }
 
 }

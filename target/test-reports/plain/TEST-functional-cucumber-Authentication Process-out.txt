@@ -3,39 +3,103 @@ Feature: Authentication Process
   I want to have access to all of its internal features, which are only accessible after a successful login procedure
 
 --Output from --
-  #@ignore
-  Scenario:                                            # Authentication.feature:6
+  #Issue#73 - Informar erro ao submeter username inexistente, na tela de Login
+  Scenario:                                              # Authentication.feature:7
+    Given I am at the Login Page                         # AuthenticationSteps.groovy:44
+    When I try to login with an user that does not exist # AuthenticationSteps.groovy:71
+    Then I am redirected to the Login Page               # AuthenticationSteps.groovy:31
+    And A login failure message is displayed             # AuthenticationSteps.groovy:77
+
+--Output from --
+  #Issue#66 - Informar erro ao submeter usuário com senha inválida, na tela de Login
+  Scenario:                                                               # Authentication.feature:15
+    Given I am at the Login Page                                          # AuthenticationSteps.groovy:44
 ENTROU no signIn
-Enabled == truetargeturi: 
-ENTROU NO TRYJefferson Almeida    Given I am at the Member Listagem page             # AuthenticationSteps.groovy:32
-    When I select the "Principal" menu option          # AuthenticationSteps.groovy:41
-    Then I am redirected to the Publications Menu page # AuthenticationSteps.groovy:45
+Enabled == true    When I try to login with an existent user, though with wrong password # AuthenticationSteps.groovy:74
+    Then I am redirected to the Login Page                                # AuthenticationSteps.groovy:31
+    And A login failure message is displayed                              # AuthenticationSteps.groovy:77
 
 --Output from --
-  #@ignore
-  Scenario:                                              # Authentication.feature:12
-    Given I am at the Login Page                         # AuthenticationSteps.groovy:49
-    When I try to login with an user that does not exist # AuthenticationSteps.groovy:52
-    Then A login failure message is displayed            # AuthenticationSteps.groovy:56
+  #Issue#63 - Informar quando um usuário é cadastrado com sucesso
+  Scenario:                                                                     # Authentication.feature:23
+ENTROU no registerparams NULL    Given I am at the User Register Page                                        # AuthenticationSteps.groovy:48
+user: null
+validate: null
+errors: null
+    When I register a user with success                                         # AuthenticationSteps.groovy:85
+      Assertion failed: 
+      
+      assert ( page.createNewUser() != null )
+               |    |               |
+               |    null            false
+               UserRegisterPage
+      
+      	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:386)
+      	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:658)
+      	at AuthenticationSteps$_run_closure16.doCall(AuthenticationSteps.groovy:86)
+      	at ✽.When I register a user with success(Authentication.feature:25)
+
+    And I am redirected to the User Register Page                               # AuthenticationSteps.groovy:34
+    Then A message indicating the user was successfully registered is displayed # AuthenticationSteps.groovy:88
 
 --Output from --
-  #@ignore
-  Scenario:                                                                                   # Authentication.feature:18
-ENTROU no registerparams NULL    Given I am at the Registration Page                                                       # AuthenticationSteps.groovy:61
-ENTROU no register    When I register a user with success                                                       # AuthenticationSteps.groovy:64
-    Then A message indicating the user was successfully registered is displayed at login page # AuthenticationSteps.groovy:68
+  #Issue#69 - Informar quando tentar cadastrar novo usuário com e-mail inválido
+  Scenario:                                                                        # Authentication.feature:31
+    Given The system has no user with the "invalid email abcde" email              # AuthenticationSteps.groovy:80
+    When I try to create a "newuser" username with the "invalid email abcde" email # AuthenticationSteps.groovy:102
+    Then It won't save the "newuser" username with the "invalid email abcde" email # AuthenticationSteps.groovy:106
 
 --Output from --
-  #@ignore
-  Scenario:                                                   # Authentication.feature:24
-    Given The system has no user with an "invalid email"      # AuthenticationSteps.groovy:15
-    When I try to create a "newuser" with an "invalid email"  # AuthenticationSteps.groovy:20
-    Then It won't save the "newuser" with the "invalid email" # AuthenticationSteps.groovy:25
-
---Output from --
-  Scenario:                                                 # Authentication.feature:29
-    Given I'm at the login page                             # AuthenticationSteps.groovy:88
+  #Issue#67 - Durante o login, ao errar o password de um usuário existente, cuja conta ainda não foi liberada pelo
+  #administrador, redirecionar à Tela de login e exibir uma mensagem de 'usuário ou senha inválida'
+  Scenario:                                                     # Authentication.feature:39
+    Given I am at the Login Page                                # AuthenticationSteps.groovy:44
+    And The user of "naoHabilitado" username is not yet enabled # AuthenticationSteps.groovy:93
 ENTROU no signIn
-Enabled == falsetargeturi: 
-    When I miss the password for a user that is not enabled # AuthenticationSteps.groovy:93
-    Then A message of login failed is displayed             # AuthenticationSteps.groovy:98
+Enabled == false    When I miss the password for "naoHabilitado" username       # AuthenticationSteps.groovy:97
+    Then I am redirected to the Login Page                      # AuthenticationSteps.groovy:31
+    And A login failure message is displayed                    # AuthenticationSteps.groovy:77
+
+--Output from --
+  #Duas telas diferentes de login existentes durante a navegação: uma 'oficial', acessada pelo caminho auth/login, e outra
+  #encontrada no caminho raiz '/' da aplicação
+  Scenario:                                     # Authentication.feature:50
+    Given I am not logged                       # AuthenticationSteps.groovy:149
+    When I directly access the Member List Page # AuthenticationSteps.groovy:40
+    Then I am redirected to the Login Page      # AuthenticationSteps.groovy:31
+
+--Output from --
+  Scenario:                                # Authentication.feature:55
+    Given I am not logged                  # AuthenticationSteps.groovy:149
+    When I access the Root Page            # AuthenticationSteps.groovy:37
+    Then I am redirected to the Login Page # AuthenticationSteps.groovy:31
+
+--Output from --
+  #Issue#9 - Preencher com valores default campos de formulários quando relevante
+  Scenario:                                                                    # Authentication.feature:62
+    Given I am at the Login Page                                               # AuthenticationSteps.groovy:44
+ENTROU no registerparams NULL    When I click the "Create an account" link                                  # AuthenticationSteps.groovy:61
+    Then I am redirected to the User Register Page                             # AuthenticationSteps.groovy:34
+    And The University field is filled with "Federal University of Pernambuco" # AuthenticationSteps.groovy:113
+
+--Output from --
+  #Issue#76 - Usuário é direcionado para tela de login repetidas vezes
+  Scenario:                                            # Authentication.feature:70
+ENTROU no signIn
+Enabled == trueENTROU NO TRYJefferson Almeida    Given I am at the Member Listagem page             # AuthenticationSteps.groovy:52
+    When I select the "Principal" menu option          # AuthenticationSteps.groovy:64
+    Then I am redirected to the Publications Menu page # AuthenticationSteps.groovy:28
+
+--Output from --
+  #Issue#65 - Ao tentar realizar cadastro de usuário com dado inválido o form de cadastro deve ser retornado com os
+  #dados previamente preenchidos
+  Scenario:                                                           # Authentication.feature:78
+    Given I am at the Login Page                                      # AuthenticationSteps.groovy:44
+ENTROU no registerparams NULL    When I click the "Create an account" link                         # AuthenticationSteps.groovy:61
+    And I am redirected to the User Register Page                     # AuthenticationSteps.groovy:34
+    And I mistype my password at the second password field            # AuthenticationSteps.groovy:118
+    And I fill my remaining user data                                 # AuthenticationSteps.groovy:123
+ENTROU no register    And I submit the form                                             # AuthenticationSteps.groovy:67
+    Then I am redirected to the User Register Page                    # AuthenticationSteps.groovy:34
+    And The password fields are empty                                 # AuthenticationSteps.groovy:131
+    And My remaining user data is still at their corresponding fields # AuthenticationSteps.groovy:137
