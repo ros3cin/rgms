@@ -93,16 +93,12 @@ Scenario:
 
 
 
-
-
-#Essa issue só existiria se o UrlMappings fosse configurado para visualizar views. Esse scenario não foi implementado.
-@ignore
-Scenario:
-  Given I am not logged
-  When I directly access the Publications Menu Page
-  Then I am redirected to the Login Page
-
-#O campo 'Remember me' da tela de login não surte efeito, ao reinicializar o browser.
+ #O campo 'Remember me' da tela de login não surte efeito, ao reinicializar o browser.
+ #Essa issue FOI resolvida!! No entanto, não é possível gerar um scenario convincente, pois atualmente o grails
+ #limpa todos os cookies toda vez em que o browser é inicializado no escopo de testes. Tentamos utilizar a propriedade
+ #de configuração autoClearCookies de várias formas, como chegamos a comentar na thread dessa atividade no email, porém
+ #nenhuma surtiu o efeito esperado, e os cookies continuaram sendo apagados.
+ #NOS FOI PEDIDO, no entanto, que este scenario fosse mantido, com o devido comentário explicando a situação.
 @ignore
 Scenario:
   Given I am not logged
@@ -116,3 +112,15 @@ Scenario:
   And I access the Root Page
   Then I am redirected to the Publications Menu page
 
+ #Essa issue só existiria se o UrlMappings fosse configurado para visualizar views. Esse scenario não foi implementado.
+ #Esse scenario busca representar que, atualmente, o plugin shiro não autentica/protege acessos diretos a views, apenas
+ #à páginas gerenciadas por uma class de controle. Ou seja, ao acessar diretamente - sem ter passado com sucesso
+ #por um procedimento de login - uma página gerenciada por um controle, o shiro redireciona o navegador para a página
+ #de login. No entanto, o mesmo não acontece se o acesso direto é feito a uma view (.gsp), resultando em acesso
+ #irrestrito a qualquer view da aplicação, contanto que essa esteja acessível por algum caminho na UrlMappings.
+ #NOS FOI PEDIDO, no entanto, que este scenario fosse mantido, com o devido comentário explicando a situação.
+@ignore
+Scenario:
+  Given I am not logged
+  When I directly access the Publications Menu Page
+  Then I am redirected to the Login Page

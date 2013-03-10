@@ -186,6 +186,7 @@ When (~'I close and reopen the browser') { ->
     page.browser.config.setAutoClearCookies(false)
     ChromeDriver driverr = (ChromeDriver) page.driver
     SessionId session = driverr.getSessionId()
+    def capabilities = driverr.getCapabilities()
     driverr.close()
     page.browser.config.setAutoClearCookies(false)
     driverr.startSession(capabilities)

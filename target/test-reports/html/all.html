@@ -57,7 +57,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 7.842 seconds.</p>
+<p class="summary">Executed in 7.735 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -67,7 +67,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 0.944 seconds.</p>
+<p class="summary">Executed in 0.938 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -77,7 +77,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 5.341 seconds.</p>
+<p class="summary">Executed in 6.388 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -87,7 +87,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 0.041 seconds.</p>
+<p class="summary">Executed in 4.727 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -97,7 +97,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 0.83 seconds.</p>
+<p class="summary">Executed in 0.965 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -107,7 +107,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 0.22 seconds.</p>
+<p class="summary">Executed in 0.178 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -117,7 +117,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 0.2 seconds.</p>
+<p class="summary">Executed in 0.268 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -127,7 +127,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 1.26 seconds.</p>
+<p class="summary">Executed in 1.62 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -137,7 +137,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 2.846 seconds.</p>
+<p class="summary">Executed in 3.192 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -147,7 +147,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success"></b>
 </p>
-<p class="summary">Executed in 6.08 seconds.</p>
+<p class="summary">Executed in 7.888 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -162,99 +162,101 @@
 --Output from --
   #Issue#73 - Informar erro ao submeter username inexistente, na tela de Login
   Scenario:                                              # Authentication.feature:7
-    Given I am at the Login Page                         # AuthenticationSteps.groovy:44
-    When I try to login with an user that does not exist # AuthenticationSteps.groovy:71
-    Then I am redirected to the Login Page               # AuthenticationSteps.groovy:31
-    And A login failure message is displayed             # AuthenticationSteps.groovy:77
+    Given I am at the Login Page                         # AuthenticationSteps.groovy:45
+    When I try to login with an user that does not exist # AuthenticationSteps.groovy:72
+    Then I am redirected to the Login Page               # AuthenticationSteps.groovy:32
+    And A login failure message is displayed             # AuthenticationSteps.groovy:78
 
 --Output from --
   #Issue#66 - Informar erro ao submeter usu&aacute;rio com senha inv&aacute;lida, na tela de Login
   Scenario:                                                               # Authentication.feature:15
-    Given I am at the Login Page                                          # AuthenticationSteps.groovy:44
+    Given I am at the Login Page                                          # AuthenticationSteps.groovy:45
 ENTROU no signIn
-Enabled == true    When I try to login with an existent user, though with wrong password # AuthenticationSteps.groovy:74
-    Then I am redirected to the Login Page                                # AuthenticationSteps.groovy:31
-    And A login failure message is displayed                              # AuthenticationSteps.groovy:77
+Enabled == true    When I try to login with an existent user, though with wrong password # AuthenticationSteps.groovy:75
+    Then I am redirected to the Login Page                                # AuthenticationSteps.groovy:32
+    And A login failure message is displayed                              # AuthenticationSteps.groovy:78
 
 --Output from --
   #Issue#63 - Informar quando um usu&aacute;rio &eacute; cadastrado com sucesso
   Scenario:                                                                     # Authentication.feature:23
-ENTROU no registerparams NULL    Given I am at the User Register Page                                        # AuthenticationSteps.groovy:48
+ENTROU no registerparams NULL    Given I am at the User Register Page                                        # AuthenticationSteps.groovy:49
 user: null
 validate: null
 errors: null
-ENTROU no register    When I register a user with success                                         # AuthenticationSteps.groovy:85
-    And I am redirected to the User Register Page                               # AuthenticationSteps.groovy:34
-    Then A message indicating the user was successfully registered is displayed # AuthenticationSteps.groovy:88
+ENTROU no register    When I register a user with success                                         # AuthenticationSteps.groovy:83
+    And I am redirected to the User Register Page                               # AuthenticationSteps.groovy:35
+    Then A message indicating the user was successfully registered is displayed # AuthenticationSteps.groovy:86
 
 --Output from --
   #Issue#69 - Informar quando tentar cadastrar novo usu&aacute;rio com e-mail inv&aacute;lido
   Scenario:                                                                        # Authentication.feature:31
-    Given The system has no user with the "invalid email abcde" email              # AuthenticationSteps.groovy:80
-    When I try to create a "newuser" username with the "invalid email abcde" email # AuthenticationSteps.groovy:102
-    Then It won't save the "newuser" username with the "invalid email abcde" email # AuthenticationSteps.groovy:106
+    Given I am at the Login Page                                                   # AuthenticationSteps.groovy:45
+ENTROU no registerparams NULL    When I try to create a "newuser" username with the "invalid email abcde" email # AuthenticationSteps.groovy:106
+ENTROU no registergrails.validation.ValidationErrors: 1 errors
+Field error in object 'rgms.member.Member' on field 'email': rejected value [invalid email abcde]; codes [rgms.member.Member.email.email.error.rgms.member.Member.email,rgms.member.Member.email.email.error.email,rgms.member.Member.email.email.error.java.lang.String,rgms.member.Member.email.email.error,member.email.email.error.rgms.member.Member.email,member.email.email.error.email,member.email.email.error.java.lang.String,member.email.email.error,rgms.member.Member.email.email.invalid.rgms.member.Member.email,rgms.member.Member.email.email.invalid.email,rgms.member.Member.email.email.invalid.java.lang.String,rgms.member.Member.email.email.invalid,member.email.email.invalid.rgms.member.Member.email,member.email.email.invalid.email,member.email.email.invalid.java.lang.String,member.email.email.invalid,email.invalid.rgms.member.Member.email,email.invalid.email,email.invalid.java.lang.String,email.invalid]; arguments [email,class rgms.member.Member,invalid email abcde]; default message [O campo [{0}] da classe [{1}] com o valor [{2}] n&atilde;o &eacute; um endere&ccedil;o de email v&aacute;lido.]
+    Then A message indicating the email is invalid is displayed                    # AuthenticationSteps.groovy:118
 
 --Output from --
   #Issue#67 - Durante o login, ao errar o password de um usu&aacute;rio existente, cuja conta ainda n&atilde;o foi liberada pelo
   #administrador, redirecionar &agrave; Tela de login e exibir uma mensagem de 'usu&aacute;rio ou senha inv&aacute;lida'
   Scenario:                                                     # Authentication.feature:39
-    Given I am at the Login Page                                # AuthenticationSteps.groovy:44
-    And The user of "naoHabilitado" username is not yet enabled # AuthenticationSteps.groovy:93
+    Given I am at the Login Page                                # AuthenticationSteps.groovy:45
+    And The user of "naoHabilitado" username is not yet enabled # AuthenticationSteps.groovy:91
 ENTROU no signIn
-Enabled == false    When I miss the password for "naoHabilitado" username       # AuthenticationSteps.groovy:97
-    Then I am redirected to the Login Page                      # AuthenticationSteps.groovy:31
-    And A login failure message is displayed                    # AuthenticationSteps.groovy:77
+Enabled == false    When I miss the password for "naoHabilitado" username       # AuthenticationSteps.groovy:101
+    Then I am redirected to the Login Page                      # AuthenticationSteps.groovy:32
+    And A login failure message is displayed                    # AuthenticationSteps.groovy:78
 
 --Output from --
   #Issue#86 - Duas telas diferentes de login existentes durante a navega&ccedil;&atilde;o: uma 'oficial', acessada pelo caminho auth/login, e outra
   #encontrada no caminho raiz '/' da aplica&ccedil;&atilde;o
   Scenario:                                     # Authentication.feature:50
-    Given I am not logged                       # AuthenticationSteps.groovy:149
-    When I directly access the Member List Page # AuthenticationSteps.groovy:40
-    Then I am redirected to the Login Page      # AuthenticationSteps.groovy:31
+    Given I am not logged                       # AuthenticationSteps.groovy:161
+    When I directly access the Member List Page # AuthenticationSteps.groovy:41
+    Then I am redirected to the Login Page      # AuthenticationSteps.groovy:32
 
 --Output from --
   Scenario:                                # Authentication.feature:55
-    Given I am not logged                  # AuthenticationSteps.groovy:149
-    When I access the Root Page            # AuthenticationSteps.groovy:37
-    Then I am redirected to the Login Page # AuthenticationSteps.groovy:31
+    Given I am not logged                  # AuthenticationSteps.groovy:161
+    When I access the Root Page            # AuthenticationSteps.groovy:38
+    Then I am redirected to the Login Page # AuthenticationSteps.groovy:32
 
 --Output from --
   #Issue#9 - Preencher com valores default campos de formul&aacute;rios quando relevante
   Scenario:                                                                    # Authentication.feature:62
-    Given I am at the Login Page                                               # AuthenticationSteps.groovy:44
-ENTROU no registerparams NULL    When I click the "Create an account" link                                  # AuthenticationSteps.groovy:61
-    Then I am redirected to the User Register Page                             # AuthenticationSteps.groovy:34
-    And The University field is filled with "Federal University of Pernambuco" # AuthenticationSteps.groovy:113
+    Given I am at the Login Page                                               # AuthenticationSteps.groovy:45
+ENTROU no registerparams NULL    When I click the "Create an account" link                                  # AuthenticationSteps.groovy:62
+    Then I am redirected to the User Register Page                             # AuthenticationSteps.groovy:35
+    And The University field is filled with "Federal University of Pernambuco" # AuthenticationSteps.groovy:125
 
 --Output from --
   #Issue#76 - Usu&aacute;rio &eacute; direcionado para tela de login repetidas vezes
   Scenario:                                            # Authentication.feature:70
 ENTROU no signIn
-Enabled == trueENTROU NO TRYJefferson Almeida    Given I am at the Member Listagem page             # AuthenticationSteps.groovy:52
-    When I select the "Principal" menu option          # AuthenticationSteps.groovy:64
-    Then I am redirected to the Publications Menu page # AuthenticationSteps.groovy:28
+Enabled == trueENTROU NO TRYJefferson Almeida    Given I am at the Member Listagem page             # AuthenticationSteps.groovy:53
+    When I select the "Principal" menu option          # AuthenticationSteps.groovy:65
+    Then I am redirected to the Publications Menu page # AuthenticationSteps.groovy:29
 
 --Output from --
   #Issue#65 - Ao tentar realizar cadastro de usu&aacute;rio com dado inv&aacute;lido o form de cadastro deve ser retornado com os
   #dados previamente preenchidos
   Scenario:                                                           # Authentication.feature:78
-    Given I am at the Login Page                                      # AuthenticationSteps.groovy:44
-ENTROU no registerparams NULL    When I click the "Create an account" link                         # AuthenticationSteps.groovy:61
-    And I am redirected to the User Register Page                     # AuthenticationSteps.groovy:34
-    And I mistype my password at the second password field            # AuthenticationSteps.groovy:118
-    And I fill my remaining user data                                 # AuthenticationSteps.groovy:123
-ENTROU no register    And I submit the form                                             # AuthenticationSteps.groovy:67
-    Then I am redirected to the User Register Page                    # AuthenticationSteps.groovy:34
-    And The password fields are empty                                 # AuthenticationSteps.groovy:131
-    And My remaining user data is still at their corresponding fields # AuthenticationSteps.groovy:137
+    Given I am at the Login Page                                      # AuthenticationSteps.groovy:45
+ENTROU no registerparams NULL    When I click the "Create an account" link                         # AuthenticationSteps.groovy:62
+    And I am redirected to the User Register Page                     # AuthenticationSteps.groovy:35
+    And I mistype my password at the second password field            # AuthenticationSteps.groovy:130
+    And I fill my remaining user data                                 # AuthenticationSteps.groovy:135
+ENTROU no register    And I submit the form                                             # AuthenticationSteps.groovy:68
+    Then I am redirected to the User Register Page                    # AuthenticationSteps.groovy:35
+    And The password fields are empty                                 # AuthenticationSteps.groovy:143
+    And My remaining user data is still at their corresponding fields # AuthenticationSteps.groovy:149
 </pre>
 </div>
 <div class="syserr">
 <h2>System error</h2>
 <pre class="syserr">
 --Output from --Started ChromeDriver
-port=20150
+port=22698
 version=26.0.1383.0
 log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsmerge\rgmsmerge\chromedriver.log
 
