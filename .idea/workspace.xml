@@ -39,8 +39,8 @@
     <ignored path="rgmsTeste.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="/a.dummy" changelist="0569137d-7812-4b4a-a5f7-820f5a23a13c" time="1362873545482" ignored="false" />
-    <file path="/Dummy.txt" changelist="0569137d-7812-4b4a-a5f7-820f5a23a13c" time="1362873545869" ignored="false" />
+    <file path="/a.dummy" changelist="0569137d-7812-4b4a-a5f7-820f5a23a13c" time="1362876847496" ignored="false" />
+    <file path="/Dummy.txt" changelist="0569137d-7812-4b4a-a5f7-820f5a23a13c" time="1362876847859" ignored="false" />
     <file path="$PROJECT_DIR$/target/test-reports/TEST-functional-cucumber-journal article.xml" changelist="0569137d-7812-4b4a-a5f7-820f5a23a13c" time="1362097163550" ignored="false" />
     <file path="/Article.feature" changelist="0569137d-7812-4b4a-a5f7-820f5a23a13c" time="1362178502662" ignored="false" />
     <file path="/CucumberConfig.groovy" changelist="0569137d-7812-4b4a-a5f7-820f5a23a13c" time="1362096224003" ignored="false" />
@@ -75,7 +75,7 @@
     <file path="/register.gsp" changelist="0569137d-7812-4b4a-a5f7-820f5a23a13c" time="1362528186263" ignored="false" />
     <file path="/UserRegisterPage.groovy" changelist="0569137d-7812-4b4a-a5f7-820f5a23a13c" time="1362548403302" ignored="false" />
     <file path="/TestDataAuthentication.groovy" changelist="0569137d-7812-4b4a-a5f7-820f5a23a13c" time="1362546305605" ignored="false" />
-    <file path="$PROJECT_DIR$/target/test-reports/TEST-functional-cucumber-Authentication Process.xml" changelist="0569137d-7812-4b4a-a5f7-820f5a23a13c" time="1362873598027" ignored="false" />
+    <file path="$PROJECT_DIR$/target/test-reports/TEST-functional-cucumber-Authentication Process.xml" changelist="0569137d-7812-4b4a-a5f7-820f5a23a13c" time="1362876901350" ignored="false" />
     <file path="$PROJECT_DIR$/../../rgmsTeste/grails-app/controllers/rgms/authentication/AuthController.groovy" changelist="0569137d-7812-4b4a-a5f7-820f5a23a13c" time="1362533812940" ignored="false" />
     <file path="$PROJECT_DIR$/web-app/js/jquery-1.7.1.js" changelist="0569137d-7812-4b4a-a5f7-820f5a23a13c" time="1362538222317" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -140,7 +140,7 @@
       <file leaf-file-name="Authentication.feature" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/cucumber/Authentication.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="45" selection-start="278" selection-end="278" vertical-scroll-proportion="0.24878049">
+            <state line="103" column="56" selection-start="3885" selection-end="3885" vertical-scroll-proportion="0.41564792">
               <folding />
             </state>
           </provider>
@@ -158,7 +158,7 @@
       <file leaf-file-name="AuthenticationSteps.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/cucumber/steps/AuthenticationSteps.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="78" selection-start="2566" selection-end="2566" vertical-scroll-proportion="-21.08">
+            <state line="89" column="0" selection-start="2537" selection-end="2537" vertical-scroll-proportion="-21.08">
               <folding />
             </state>
           </provider>
@@ -185,7 +185,7 @@
       <file leaf-file-name="TestDataAuthentication.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/functional/steps/TestDataAuthentication.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="26" selection-start="1957" selection-end="1957" vertical-scroll-proportion="0.0">
+            <state line="36" column="28" selection-start="1798" selection-end="1798" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -902,7 +902,7 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5035868" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32775453" sideWeight="0.4913917" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32775453" sideWeight="0.4913917" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.67224544" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -912,8 +912,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22094691" sideWeight="0.67224544" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.4913917" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22094691" sideWeight="0.67085075" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32914925" sideWeight="0.4913917" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -982,13 +982,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/functional/steps/TestDataAuthentication.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="26" selection-start="1957" selection-end="1957" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/functional/pages/MembersListPage.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="10" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
@@ -1027,7 +1020,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="32" selection-start="1559" selection-end="1559" vertical-scroll-proportion="1.6919432" />
+        <state line="49" column="32" selection-start="1559" selection-end="1559" vertical-scroll-proportion="1.6919432">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/rgms/authentication/AuthController.groovy">
@@ -1046,7 +1041,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/cucumber/steps/AuthenticationSteps.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="78" selection-start="2566" selection-end="2566" vertical-scroll-proportion="-21.08">
+        <state line="89" column="0" selection-start="2537" selection-end="2537" vertical-scroll-proportion="-21.08">
           <folding />
         </state>
       </provider>
@@ -1081,9 +1076,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/functional/steps/TestDataAuthentication.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="28" selection-start="1798" selection-end="1798" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/cucumber/Authentication.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="45" selection-start="278" selection-end="278" vertical-scroll-proportion="0.24878049">
+        <state line="103" column="56" selection-start="3885" selection-end="3885" vertical-scroll-proportion="0.41564792">
           <folding />
         </state>
       </provider>

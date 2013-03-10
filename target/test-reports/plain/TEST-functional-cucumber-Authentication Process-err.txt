@@ -1,6 +1,6 @@
 
 --Output from --Started ChromeDriver
-port=22698
+port=29402
 version=26.0.1383.0
 log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsmerge\rgmsmerge\chromedriver.log
 

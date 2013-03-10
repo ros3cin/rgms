@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="Flavio-PCW" id="0" name="Authentication Process" package="" tests="10" time="34.05" timestamp="2013-03-09T23:59:21">
+  <testsuite errors="0" failures="0" hostname="Flavio-PCW" id="0" name="Authentication Process" package="" tests="10" time="35.058" timestamp="2013-03-10T00:54:24">
       <properties />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="7.735" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="7.814" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.938" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.957" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="6.388" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="6.442" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="4.727" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="4.905" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.965" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.993" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.178" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.205" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.268" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="0.24" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="1.62" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="1.695" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="3.192" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="3.316" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="7.888" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="" time="8.312" />
 
       <system-out><![CDATA[Feature: Authentication Process
   As a registered member in the system
@@ -122,7 +122,7 @@ ENTROU no register    And I submit the form                                     
 
       <system-err><![CDATA[
 --Output from --Started ChromeDriver
-port=22698
+port=29402
 version=26.0.1383.0
 log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsmerge\rgmsmerge\chromedriver.log
 

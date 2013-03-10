@@ -1,5 +1,5 @@
 Testsuite: Authentication Process
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 34,05 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 35,058 sec
 ------------- Standard Output ---------------
 Feature: Authentication Process
   As a registered member in the system
@@ -100,7 +100,7 @@ ENTROU no register    And I submit the form                                     
 ------------- Standard Error -----------------
 
 --Output from --Started ChromeDriver
-port=22698
+port=29402
 version=26.0.1383.0
 log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsmerge\rgmsmerge\chromedriver.log
 
@@ -114,13 +114,13 @@ log=C:\Users\Flavio\gitprojects\rgmsNew\rgmsmerge\rgmsmerge\chromedriver.log
 --Output from --
 --Output from --------------- ---------------- ---------------
 
-Testcase:  took 7,735 sec
-Testcase:  took 0,938 sec
-Testcase:  took 6,388 sec
-Testcase:  took 4,727 sec
-Testcase:  took 0,965 sec
-Testcase:  took 0,178 sec
-Testcase:  took 0,268 sec
-Testcase:  took 1,621 sec
-Testcase:  took 3,192 sec
-Testcase:  took 7,888 sec
+Testcase:  took 7,814 sec
+Testcase:  took 0,957 sec
+Testcase:  took 6,442 sec
+Testcase:  took 4,905 sec
+Testcase:  took 0,993 sec
+Testcase:  took 0,205 sec
+Testcase:  took 0,24 sec
+Testcase:  took 1,695 sec
+Testcase:  took 3,316 sec
+Testcase:  took 8,313 sec

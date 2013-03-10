@@ -12,7 +12,7 @@ import org.openqa.selenium.remote.SessionId
 import pages.ArticleCreatePage
 import pages.ArticlesPage
 import pages.LoginPage
-import pages.RegistrationPage
+
 import pages.MembersListPage
 import pages.PublicationsPage
 import pages.RootPage
